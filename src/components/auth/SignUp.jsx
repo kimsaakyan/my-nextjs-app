@@ -30,21 +30,17 @@ const SignUp = () => {
                 });
 
                 const data = await response.json();
-                console.log(data);
 
                 if (response.ok) {
-                    console.log('Successfully registered');
                     formik.resetForm();
                     router.push('/signIn');
                 } else {
-                    console.error('Registration failed:', data.message);
                     setError(
                         data.message ||
                             'Something went wrong during registration. Please try again.'
                     );
                 }
             } catch (error) {
-                console.error('An error occurred during registration:', error);
                 setError('A network error occurred. Please try again.');
             } finally {
                 setPending(false);

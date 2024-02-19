@@ -26,7 +26,6 @@ export async function POST(req) {
             { status: 200 }
         );
     } catch (error) {
-        console.log('Error during user registration process:', error.message);
         return NextResponse.json(
             {
                 message:

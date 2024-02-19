@@ -38,7 +38,6 @@ const SignIn = () => {
                     router.replace('/');
                 }
             } catch (error) {
-                console.log(error.message);
                 setError('An error occurred. Please try again.');
             } finally {
                 setPending(false);

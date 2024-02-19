@@ -23,7 +23,6 @@ async function login(credentials) {
 
         return user;
     } catch (error) {
-        console.log('Error during user login process:', error);
         throw new Error('Failed to login.');
     }
 }
@@ -41,7 +40,6 @@ export const authConfig = {
                 }
 
                 const user = await login(credentials);
-                console.log(user);
                 return user;
             },
         }),
